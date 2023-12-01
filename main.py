@@ -4,7 +4,7 @@ change = CurrencyRates()
 
 historique = []
 
-devise_pref: {}
+devise_pref = []
 
 ajout_devise = input("Souhaitez-vous ajoutez une devise ? (oui/non) : ")
 
@@ -55,6 +55,11 @@ while True:
         print("Historique des résultats :")
         for entry in historique:
             print(f"Montant : {entry[0]}, Devise de départ : {entry[1]}, Devise d'arrivée : {entry[2]}, Résultat : {entry[3]}")
+
+    afficher_devise_pref = input("Souhaitez vous affichez votre devise personalisée ? (oui/non) : ")
+
+    if afficher_devise_pref == "oui":
+        print (devise_pref)
 
     if to_continue == "non":
         break
